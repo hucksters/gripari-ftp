@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
+from setuptools import setup
 
 __version__ = '0.0.0.1'
 __author__ = 'r-p1e'
@@ -12,13 +12,15 @@ def project_description():
            data from ftp server.
            """
 
+
 setup(name="gripari-ftp",
       version=__version__,
       description=project_description(),
       author=__author__,
       author_email="r-p1e@protonmail.com",
       url="https://www.github.com/r-p1e/gripari-ftp",
-      packages=["gripari-ftp"],
-      package_dir={"gripari-ftp": "src"},
-      scripts=["app/gripari-ftp.py"]
-      )
+      packages=["gripari_ftp"],
+      setup_requires=["pytest-runner"],
+      tests_require=["pytest"],
+      package_dir={"gripari_ftp": "src"},
+      scripts=["app/gripari_ftp.py"])
