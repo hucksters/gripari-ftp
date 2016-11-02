@@ -20,4 +20,5 @@ setup(name="gripari-ftp",
       url="https://www.github.com/r-p1e/gripari-ftp",
       packages=["gripari-ftp"],
       package_dir={"gripari-ftp": "src"},
+      scripts=["app/gripari-ftp.py"]
       )
