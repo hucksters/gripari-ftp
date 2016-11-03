@@ -4,6 +4,8 @@
 import sqlite3
 from typing import List
 
+Connection = sqlite3.Connection
+
 
 def initialize(connection: str) -> sqlite3.Connection:
     """
@@ -20,7 +22,8 @@ def create_table(conn: sqlite3.Connection):
     Create table in DB with column for timestamp and column for name
     """
     with conn:
-        conn.execute("CREATE TABLE documents (timestamp int, name text)")
+        conn.execute(
+            "CREATE TABLE IF NOT EXISTS documents (timestamp int, name text)")
 
 
 def finalize(conn: sqlite3.Connection):
