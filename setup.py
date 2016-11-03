@@ -21,6 +21,6 @@ setup(name="gripari-ftp",
       url="https://www.github.com/r-p1e/gripari-ftp",
       packages=["gripari_ftp"],
       setup_requires=["pytest-runner"],
-      tests_require=["pytest"],
+      tests_require=["pytest", "pyftpdlib", "pytest-xdist", "pytest-sugar", "pytest-cov"],
       package_dir={"gripari_ftp": "src"},
       scripts=["app/gripari_ftp.py"])
